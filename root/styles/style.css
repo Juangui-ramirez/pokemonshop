@@ -7,45 +7,102 @@
 
 header {
   background-color: #306bb3;
+  height: 10vh;
+  width: auto;
   display: flex;
-  justify-content: space-around;
-  color: white;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header>div {
+  display: flex;
   align-items: center;
+  width: 30%;
+  justify-content: space-between;
 }
 
-header a {
+
+.list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+a {
   color: white;
+  text-decoration: none;
 }
 
-header ul {
-  display: flex;
+button {
+  background-color: white;
+  color: #306bb3;
+  border: none;
+  margin-right: 10%;
+  width: 82px;
+  height: 38px;
+  border-radius: 4px;
 }
 
-header ul li {
+main {
   display: flex;
-  padding: 10px;
-}
-
-section {
-  display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  padding: 50px;
+  padding: 50px 30px;
+}
+
+main>img {
+  width: 40%;
+  height: 40%;
+}
+
+section>article {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h1 {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+section>article>div>a {
+  color: black;
+  padding: 30px;
+  font-weight: bold;
 }
 
 footer {
   display: flex;
   background-color: #306bb3;
   color: white;
+  padding: 10px;
   justify-content: space-around;
-  padding: 10px;
 }
 
-footer li {
-  display: flex;
-  padding: 10px;
-}
-
-li {
+li{
   list-style: none;
 }
+
+.links{
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links ul{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.redes {
+  width: 40%;
+  gap: 30px;
+}
+
+
+
