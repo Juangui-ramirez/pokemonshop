@@ -26,7 +26,7 @@ header > div {
 .list {
   display: flex;
   list-style: none;
-  gap: 50px;
+  gap: 20px;
 }
 
 a {
@@ -34,7 +34,7 @@ a {
   text-decoration: none;
 }
 
-button {
+header button {
   background-color: white;
   color: #306bb3;
   border: none;
@@ -44,45 +44,117 @@ button {
   border-radius: 4px;
 }
 
-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 80px 30px;
-  align-items: center;
-}
-
-main > img {
-  width: 40%;
-  height: 40%;
-  padding-right: 10PX;
-}
-
-section > article {
-  width: 60%;
+.info {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
-  padding-left: 30px;
+  margin-top: 90px;
 }
 
 h1 {
-  font-family: "Plus Jakarta Sans";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 40px;
-}
-
-section > article > div > a {
-  color: black;
-  padding: 30px;
-  font-weight: bold;
-}
-
-p {
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 48px;
+  color: #486284;
+}
+
+.info p {
+  color: #1a202c;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: minmax(auto, auto);
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 32px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.main-nav {
+  grid-column: 1 / 5;
+  border-bottom-style: inset;
+}
+
+.main-nav ul {
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-nav > ul > a {
+  color: #1a202c;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  opacity: 0.5;
+}
+
+.main-nav ul a:hover {
+  opacity: 1;
+}
+
+.main-nav:hover {
+  border-bottom-style: solid;
+}
+
+.card {
+  display: grid;
+  background-color: #dee5ed;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.name,
+.power {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.img {
+  background-color: white;
+  width: 254px;
+  height: 241px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 116px;
+  height: 44px;
+  background: #306bb3;
+  border-radius: 4px;
+  color: white;
+  border-style: none;
+}
+
+.more-cards {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 520px;
+  padding: 50px;
+}
+
+.more-cards > p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #306BB3;
 }
 
 footer {
@@ -135,7 +207,8 @@ li {
   gap: 30px;
 }
 
-.logo-footer, header>img{
+.logo-footer,
+header > img {
   width: 150px;
   height: 55px;
 }
