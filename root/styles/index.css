@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  background-color: #306bb3;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > img {
+  width: 50%;
+  max-width: 150px;
+  margin-left: 3%;
+}
+
+header > div {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  background-color: white;
+  color: #306bb3;
+  border: none;
+  min-width: 82px;
+  min-height: 38px;
+  border-radius: 4px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  padding: 80px 30px;
+  align-items: center;
+}
+
+main > img {
+  width: 50%;
+}
+
+section {
+  width: 50%;
+}
+
+section > article {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 90%;
+}
+
+h1 {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+section > article > div > a {
+  color: black;
+  padding: 30px;
+  font-weight: bold;
+}
+
+p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  background-color: #306bb3;
+  color: white;
+  justify-content: space-between;
+  padding: 50px 30px;
+  align-items: center;
+}
+
+.redes {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+footer img {
+  max-width: 150px;
+  max-height: 55px;
+}
+
+footer p {
+  width: 50%;
+}
+
+.icon {
+  display: flex;
+  gap: 30px;
+  font-size: 15px;
+}
+
+.links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.links li {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .icon {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blueviolet;
+  }
+
+  .redes {
+    width: 30%;
+  }
+
+  footer img {
+    max-width: 50%;
+  }
+
+  footer p {
+    width: 50%;
+  }
+
+  .links {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 778px) {
+  body {
+    background-color: red;
+  }
+
+  header img {
+    max-width: 20%;
+  }
+
+  header div {
+    width: 70%;
+  }
+
+  section article div a {
+    padding: 10px;
+  }
+
+  .icon {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    background-color: magenta;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header img {
+    width: 100%;
+    min-width: 120px;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  section article {
+    width: 100%;
+  }
+
+  main img {
+    width: 80%;
+    padding-top: 20px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .redes {
+    width: 100%;
+    align-items: center;
+  }
+
+  footer p {
+    width: 100%;
+  }
+
+  .icon {
+    padding-bottom: 35px;
+  }
+
+  .links {
+    width: 100%;
+  }
+
+  .links ul {
+    font-size: 15px;
+  }
+
+  .links ul li {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    background-color: green;
+  }
+}
