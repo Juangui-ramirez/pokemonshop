@@ -5,28 +5,36 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+li {
+  list-style: none;
+}
+
 header {
   background-color: #306bb3;
-  height: 10vh;
-  width: auto;
+  height: auto;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-left: 50px;
+}
+
+header > img {
+  width: 50%;
+  max-width: 150px;
+  margin-left: 3%;
 }
 
 header > div {
+  width: 50%;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  width: 30%;
-  justify-content: space-between;
 }
 
 .list {
   display: flex;
   list-style: none;
   gap: 50px;
+  align-items: center;
 }
 
 a {
@@ -34,13 +42,12 @@ a {
   text-decoration: none;
 }
 
-header button {
+button {
   background-color: white;
   color: #306bb3;
   border: none;
-  margin-right: 10%;
-  width: 82px;
-  height: 38px;
+  min-width: 82px;
+  min-height: 38px;
   border-radius: 4px;
 }
 
@@ -66,7 +73,6 @@ section {
     gap: 50px;
     padding: 50px;
 }
-
 
 .title {
   display: flex;

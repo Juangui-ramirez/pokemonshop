@@ -5,28 +5,36 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+li {
+  list-style: none;
+}
+
 header {
   background-color: #306bb3;
-  height: 10vh;
-  width: auto;
+  height: auto;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-left: 50px;
+}
+
+header > img {
+  width: 50%;
+  max-width: 150px;
+  margin-left: 3%;
 }
 
 header > div {
+  width: 50%;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  width: 30%;
-  justify-content: space-between;
 }
 
 .list {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 50px;
+  align-items: center;
 }
 
 a {
@@ -38,13 +46,13 @@ header button {
   background-color: white;
   color: #306bb3;
   border: none;
-  margin-right: 10%;
-  width: 82px;
-  height: 38px;
+  min-width: 82px;
+  min-height: 38px;
   border-radius: 4px;
 }
 
 .info {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,18 +74,28 @@ h1 {
   font-size: 18px;
 }
 
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .grid-container {
   display: grid;
   grid-template-rows: minmax(auto, auto);
   grid-template-columns: repeat(4, auto);
   grid-gap: 32px;
-  justify-content: center;
   padding: 50px 0;
+  width: 100%;
+
+  justify-content: space-around;
 }
 
 .main-nav {
   grid-column: 1 / 5;
   border-bottom-style: inset;
+  width: 100%;
 }
 
 .main-nav ul {
@@ -108,6 +126,7 @@ h1 {
   background-color: #dee5ed;
   border-radius: 10px;
   padding: 20px;
+  width: 100%;
 }
 
 .name,
@@ -124,17 +143,16 @@ h1 {
 
 .img {
   background-color: white;
-  width: 254px;
-  height: 241px;
+  width: 100%;
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 5%;
 }
 
-button {
-  width: 116px;
-  height: 44px;
+main button {
+  min-width: 52px;
+  min-height: 38px;
   background: #306bb3;
   border-radius: 4px;
   color: white;
@@ -153,10 +171,11 @@ button {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  color: #306BB3;
+  color: #306bb3;
 }
 
 footer {
+  width: 100%;
   display: flex;
   background-color: #306bb3;
   color: white;
@@ -165,12 +184,30 @@ footer {
   align-items: center;
 }
 
-li {
-  list-style: none;
+.redes {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+footer img {
+  max-width: 150px;
+  max-height: 55px;
+}
+
+footer p {
+  width: 50%;
+}
+
+.icon {
+  display: flex;
+  gap: 30px;
+  font-size: 15px;
 }
 
 .links {
-  width: 60%;
+  width: 50%;
   display: flex;
   justify-content: space-around;
 }
@@ -192,28 +229,129 @@ li {
   font-size: 16px;
 }
 
-.redes {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-left: 30px;
-}
-
-.icon {
-  display: flex;
-  padding-top: 30px;
-  gap: 30px;
-}
-
-.logo-footer,
-header > img {
-  width: 150px;
-  height: 55px;
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
   body {
     background-color: lightblue;
+  }
+
+  .icon {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blueviolet;
+  }
+
+  .redes {
+    width: 30%;
+  }
+
+  footer img {
+    max-width: 50%;
+  }
+
+  footer p {
+    width: 50%;
+  }
+
+  .links {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 778px) {
+  body {
+    background-color: red;
+  }
+
+  header img {
+    max-width: 20%;
+  }
+
+  header div {
+    width: 70%;
+  }
+
+  section article div a {
+    padding: 10px;
+  }
+
+  .icon {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    background-color: magenta;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header img {
+    width: 100%;
+    min-width: 120px;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  section article {
+    width: 100%;
+  }
+
+  main img {
+    width: 80%;
+    padding-top: 20px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .redes {
+    width: 100%;
+    align-items: center;
+  }
+
+  footer p {
+    width: 100%;
+  }
+
+  .icon {
+    padding-bottom: 35px;
+  }
+
+  .links {
+    width: 100%;
+  }
+
+  .links ul {
+    font-size: 15px;
+  }
+
+  .links ul li {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    background-color: green;
   }
 }
