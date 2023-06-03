@@ -11,7 +11,6 @@ const getPokemon = async () => {
       const cardName = document.createElement("div");
       const name = document.createElement("p");
       const icon = document.createElement("i");
-      const cardImg = document.createElement("div");
       const imgPoke = document.createElement("img");
       const powerLevel = document.createElement("div");
       const namePower = document.createElement("p");
@@ -29,15 +28,14 @@ const getPokemon = async () => {
       card.classList.add("card");
       cardName.classList.add("name");
       icon.className = "fa-sharp fa-regular fa-heart fa-beat";
-      cardImg.classList.add("img");
+      imgPoke.classList.add("img");
       powerLevel.classList.add("power");
       btnBuy.classList.add("btnCard");
 
       card.appendChild(cardName);
       cardName.appendChild(name);
       cardName.appendChild(icon);
-      card.appendChild(cardImg);
-      cardImg.appendChild(imgPoke);
+      card.appendChild(imgPoke);
       card.appendChild(powerLevel);
       powerLevel.appendChild(namePower);
       powerLevel.appendChild(btnBuy);
