@@ -8,7 +8,7 @@
 }
 
 body.darkMode {
-  background-color: black;
+  background-color: #1A202C;
 }
 
 .darkMode h1{
@@ -25,7 +25,6 @@ body.darkMode {
 
 body.lightMode {
   background-color: white;
-  color: black;
 }
 
 header {

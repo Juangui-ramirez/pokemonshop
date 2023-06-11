@@ -7,8 +7,19 @@
 }
 
 body.darkMode {
-  background-color: black;
+  background-color: #1A202C;;
+}
+
+.darkMode h1{
   color: white;
+}
+
+.darkMode p{
+  color: white;
+}
+
+.darkMode a {
+  color:white;
 }
 
 body.lightMode {
