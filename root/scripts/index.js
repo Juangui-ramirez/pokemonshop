@@ -22,15 +22,12 @@ const getPokemon = async () => {
         const resPokemon = await fetch(pokemon.url);
         const dataPokemon = await resPokemon.json();
 
-        const typesPokemon = dataPokemon.types.map(
-          (typeObj) => typeObj.type.name
-        );
+        const typesPokemon = dataPokemon.types.map((typeObj) => typeObj.type.name);
 
-        const type1 = dataPokemon.types[0].type.name;
-        // const type2 = dataPokemon.types[1].type.name;
+        const type1 = typesPokemon[0];
+        const type2 = typesPokemon[1] || null;
 
-        imgPoke.src =
-          dataPokemon.sprites.other["official-artwork"].front_default;
+        imgPoke.src = dataPokemon.sprites.other["home"].front_default;
         name.textContent = dataPokemon.name;
         namePower.textContent = dataPokemon.base_experience;
         btnBuy.textContent = "Buy";
@@ -52,6 +49,9 @@ const getPokemon = async () => {
 
         document.querySelector(".grid-container").appendChild(card);
 
+        card.setAttribute('dataType1', type1);
+        card.setAttribute('dataType2', type2);
+
         totalLoaded++;
 
         const cardCountElement = document.querySelector(".cardsCount");
@@ -66,13 +66,33 @@ const getPokemon = async () => {
 
 getPokemon();
 
-const loadMorePokemon = (event) => {
-  event.preventDefault();
-  getPokemon();
-};
-
 const btnMore = document.querySelector(".btnMore");
-btnMore.addEventListener("click", loadMorePokemon);
+btnMore.addEventListener("click", getPokemon);
+
+
+const typeLinks = document.querySelectorAll('.navType');
+
+typeLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const type = link.textContent.toLowerCase();
+    filterByType(type);
+  });
+});
+
+const filterByType = (type) => {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card) => {
+    const cardType1 = card.getAttribute('dataType1');
+    const cardType2 = card.getAttribute('dataType2');
+    
+    if (type === 'all' || cardType1 === type || cardType2 === type) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+};
 
 const btnDarkMode = document.querySelector(".btnDark");
 const colorBack = document.body;

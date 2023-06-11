@@ -11,6 +11,18 @@ body.darkMode {
   background-color: black;
 }
 
+.darkMode h1{
+  color:white;
+}
+
+.darkMode a{
+  color: white;
+}
+
+.darkMode .info p{
+  color: white;
+}
+
 body.lightMode {
   background-color: white;
   color: black;
@@ -22,6 +34,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
 }
 
 header > img {
@@ -92,6 +106,8 @@ section {
   display: flex;
   justify-content: space-around;
   width: 90%;
+  position: sticky;
+  top: 30px;
 }
 
 .navType {
@@ -127,6 +143,10 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.card.hidden {
+  display: none;
 }
 
 .name,
