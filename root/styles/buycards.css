@@ -9,10 +9,12 @@
 
 body.darkMode {
   background-color: #1A202C;
+  transition: 1s;
 }
 
 .darkMode h1{
   color:white;
+  
 }
 
 .darkMode a{
@@ -23,8 +25,13 @@ body.darkMode {
   color: white;
 }
 
-body.lightMode {
-  background-color: white;
+body {
+  background-color: rgb(254, 254, 254);
+  transition: all 1s ease;
+}
+
+.darkMode .card{
+  background-color: rgb(135, 126, 129);
 }
 
 header {
@@ -165,6 +172,11 @@ section {
   height: 80%;
   border-radius: 4px;
   margin: 5%;
+  transition: transform 1s ease;
+}
+
+.img.flipped {
+ transform:  rotateY(360deg);
 }
 
 .btnCard {

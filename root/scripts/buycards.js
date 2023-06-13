@@ -22,7 +22,9 @@ const getPokemon = async () => {
         const resPokemon = await fetch(pokemon.url);
         const dataPokemon = await resPokemon.json();
 
-        const typesPokemon = dataPokemon.types.map((typeObj) => typeObj.type.name);
+        const typesPokemon = dataPokemon.types.map(
+          (typeObj) => typeObj.type.name
+        );
 
         const type1 = typesPokemon[0];
         const type2 = typesPokemon[1] || null;
@@ -49,13 +51,27 @@ const getPokemon = async () => {
 
         document.querySelector(".grid-container").appendChild(card);
 
-        card.setAttribute('dataType1', type1);
-        card.setAttribute('dataType2', type2);
+        card.setAttribute("dataType1", type1);
+        card.setAttribute("dataType2", type2);
 
         totalLoaded++;
 
         const cardCount = document.querySelector(".cardsCount");
         cardCount.textContent = `${totalLoaded} Cards`;
+
+        imgPoke.addEventListener("click", async () => {
+          if (imgPoke.src === dataPokemon.sprites.other["home"].front_shiny) {
+            imgPoke.classList.toggle("flipped");
+            setTimeout(() => {
+              imgPoke.src = dataPokemon.sprites.other["home"].front_default;
+            }, 500); // Cambia la imagen después de 500 milisegundos (0.5 segundos)
+          } else {
+            setTimeout(() => {
+              imgPoke.src = dataPokemon.sprites.other["home"].front_shiny;
+            }, 500)
+            imgPoke.classList.toggle("flipped");
+          }
+        });
       }
     });
     offset += limit;
@@ -69,11 +85,10 @@ getPokemon();
 const btnMore = document.querySelector(".btnMore");
 btnMore.addEventListener("click", getPokemon);
 
-
-const typeLinks = document.querySelectorAll('.navType');
+const typeLinks = document.querySelectorAll(".navType");
 
 typeLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
+  link.addEventListener("click", (event) => {
     event.preventDefault();
     const type = link.textContent.toLowerCase();
     filterByType(type);
@@ -81,15 +96,15 @@ typeLinks.forEach((link) => {
 });
 
 const filterByType = (type) => {
-  const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
-    const cardType1 = card.getAttribute('dataType1');
-    const cardType2 = card.getAttribute('dataType2');
-    
-    if (type === 'all' || cardType1 === type || cardType2 === type) {
-      card.classList.remove('hidden');
+    const cardType1 = card.getAttribute("dataType1");
+    const cardType2 = card.getAttribute("dataType2");
+
+    if (type === "all" || cardType1 === type || cardType2 === type) {
+      card.classList.remove("hidden");
     } else {
-      card.classList.add('hidden');
+      card.classList.add("hidden");
     }
   });
 };
