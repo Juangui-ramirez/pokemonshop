@@ -22,12 +22,9 @@ const getPokemon = async () => {
         const resPokemon = await fetch(pokemon.url);
         const dataPokemon = await resPokemon.json();
 
-        const typesPokemon = dataPokemon.types.map(
+        const [type1,type2]= dataPokemon.types.map(
           (typeObj) => typeObj.type.name
         );
-
-        const type1 = typesPokemon[0];
-        const type2 = typesPokemon[1] || null;
 
         imgPoke.src = dataPokemon.sprites.other["home"].front_default;
         name.textContent = dataPokemon.name;
@@ -68,7 +65,7 @@ const getPokemon = async () => {
           } else {
             setTimeout(() => {
               imgPoke.src = dataPokemon.sprites.other["home"].front_shiny;
-            }, 500)
+            }, 500);
             imgPoke.classList.toggle("flipped");
           }
         });

@@ -1,10 +1,13 @@
+:root{
+  --primary-dark-color:#1d426f;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
   list-style: none;
-  
 }
 
 body.darkMode {
@@ -14,7 +17,6 @@ body.darkMode {
 
 .darkMode h1{
   color:white;
-  
 }
 
 .darkMode a{
@@ -31,7 +33,7 @@ body {
 }
 
 .darkMode .card{
-  background-color: rgb(135, 126, 129);
+  background-color: var(--primary-dark-color);
 }
 
 header {
@@ -40,8 +42,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
 }
 
 header > img {
@@ -112,8 +112,6 @@ section {
   display: flex;
   justify-content: space-around;
   width: 90%;
-  position: sticky;
-  top: 30px;
 }
 
 .navType {
@@ -124,6 +122,10 @@ section {
   margin-bottom: 1%;
   border-bottom: 2px solid #90a3bf;
   text-align: center;
+}
+
+.navType a{
+  color: black;
 }
 
 .navType:hover {
