@@ -8,6 +8,7 @@
 
 body.darkMode {
   background-color: #1A202C;
+  transition: 1s;
   color: white;
 }
 
@@ -26,6 +27,7 @@ body.darkMode {
 body.lightMode {
   background-color: white;
   color: black;
+  transition: all 1s ease;
 }
 
 header {
